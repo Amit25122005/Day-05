@@ -1,0 +1,3 @@
+import { StyleSheet, Text, View } from 'react-native';
+export default function MetricCard({ label, value, detail }) { return <View style={styles.card}><Text style={styles.label}>{label}</Text><Text style={styles.value}>{value}</Text>{detail ? <Text style={styles.detail}>{detail}</Text> : null}</View>; }
+const styles = StyleSheet.create({ card: { flex: 1, minWidth: 130, backgroundColor: '#162440', borderRadius: 18, padding: 15, margin: 5 }, label: { color: '#9BA9C7', fontSize: 12, fontWeight: '700' }, value: { color: '#F5F8FF', fontWeight: '800', fontSize: 22, marginTop: 7 }, detail: { color: '#66779B', fontSize: 11, marginTop: 3 } });

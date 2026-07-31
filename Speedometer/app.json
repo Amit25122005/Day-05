@@ -1,11 +1,14 @@
 {
   "expo": {
-    "name": "Speedometer",
-    "slug": "Speedometer",
+    "name": "MotionTrack",
+    "slug": "motiontrack",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "plugins": [
+      ["expo-location", { "locationWhenInUsePermission": "Allow MotionTrack to use your location for GPS speed and distance." }]
+    ],
     "ios": {
       "supportsTablet": true
     },
