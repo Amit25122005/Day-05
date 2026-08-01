@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SpeedometerApp",
-    "slug": "SpeedometerApp",
+    "name": "Real Speedometer",
+    "slug": "real-speedometer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,9 +9,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Real Speedometer uses your location while the app is open to measure speed and record trips."
+      }
     },
     "android": {
+      "package": "com.example.realspeedometer",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -26,6 +36,12 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow Real Speedometer to use your location to measure speed and record trips."
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",
@@ -43,6 +59,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "52f1d094-226c-451b-8ea5-bf88f63620e0"
+      }
     }
   }
 }
